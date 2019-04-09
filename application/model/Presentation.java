@@ -1,13 +1,16 @@
 package application.model;
 
 
+import java.util.Date;
+
 public class Presentation {
 
+    int id;
     private Movie movie;
     private Room room;
-
-    private String day;
-    private String time;
+    private Date startDateTime;
+    private Date endDateTime;
+    private int duration;
 
     public Movie getMovie() {
         return movie;
@@ -25,19 +28,35 @@ public class Presentation {
         this.room = room;
     }
 
-    public String getDay() {
-        return day;
+    public int getId() {
+        return id;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public Date getStartDateTime() {
+        return startDateTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setStartDateTime(Date startDateTime) {
+        this.startDateTime = startDateTime;
+    }
+
+    public Date getEndDateTime() {
+        return endDateTime;
+    }
+
+    public void setEndDateTime(Date endDateTime) {
+        this.endDateTime = endDateTime;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
