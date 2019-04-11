@@ -1,8 +1,10 @@
 package application.model;
 
+import java.util.List;
+
 public class Reservation {
     private Presentation presentation;
-    private Seat seat;
+    private List<Seat> seat;
 
     public Presentation getPresentation() {
         return presentation;
@@ -12,11 +14,13 @@ public class Reservation {
         this.presentation = presentation;
     }
 
-    public Seat getSeat() {
+    public List<Seat> getSeat() {
         return seat;
     }
 
-    public void setSeat(Seat seat) {
+    public void setSeat(List<Seat> seat) {
         this.seat = seat;
     }
+
+
 }

@@ -47,4 +47,31 @@ public class Room {
     public String toString() {
         return null;
     }
+
+
+    public List<Room> addRoom(Room room, List<Room> roomList){
+        roomList.add(room);
+
+        return roomList;
+    }
+
+    public boolean doesRoomExist(Room room, List<Room> roomList){
+        boolean exists = false;
+        for(Room roomToSearch : roomList){
+            if (room.getId() == room.getId()){
+                exists = true;
+            }
+        }
+        return exists;
+    }
+
+
+    public List<Room> deleteRoom(Room room, List<Room> roomList){
+        for(Room roomToDelete : roomList){
+            if (roomToDelete.getId()== (room.getId())){
+                roomList.remove(roomToDelete);
+            }
+        }
+        return roomList;
+    }
 }
