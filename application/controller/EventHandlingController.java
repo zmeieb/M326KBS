@@ -3,7 +3,6 @@ package application.controller;
 import application.model.Movie;
 import application.model.Presentation;
 import application.model.Room;
-import application.view.Message;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -49,7 +48,6 @@ public class EventHandlingController {
     private Room room = null;
     private Presentation presentation = null;
     private String returncode;
-    private Message message;
 
     @FXML
     private MenuItem btn_createfilm, btn_exitprogramm, btn_editfilm, btn_deletemovie;
@@ -128,7 +126,6 @@ public class EventHandlingController {
     private void initialize() {
 
         if (firstrun) {
-            message = new Message(lbl_message);
             lv_movie.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
             lv_room.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
             lv_shows.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -258,7 +255,6 @@ public class EventHandlingController {
                     controller.getFilmByName(lv_movie.getSelectionModel().getSelectedItem())));
             if (lv_room.getItems().size() == 0) {
                 lv_room.setDisable(true);
-                message.showMsg("i16");
             } else {
                 lv_room.setDisable(false);
             }
